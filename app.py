@@ -17,16 +17,13 @@ def fetch_player_seasons(pname):
 def fetch_shot_data(pname, season):
     return dl.get_player_shot_data(pname, season)
 
-# Resolve seasons dynamically with a fallback
+# Dynamic season lookup with fallback
 season_options = fetch_player_seasons(player_name)
-
-# If the API timed out or blocked career stats, use recent seasons as fallback
 if not season_options:
     st.info("Career lookup is delayed by NBA API rate limits. Defaulting to recent seasons.")
     season_options = ['2023-24', '2022-23', '2021-22', '2020-21', '2019-20']
 
-season = st.sidebar.selectbox("Season", options=season_options, key="season")
-
+# Single selectbox definition
 season = st.sidebar.selectbox("Season", options=season_options, key="season")
 shot_types = st.sidebar.radio("Shot Type", options=['All Shots', '2PT Field Goal', '3PT Field Goal'], key="shot_types")
 visualizer = st.sidebar.radio("Visualize Shot Chart", options=['Scatter (Makes & Misses)', 'Hexbin Density (Frequency)'], key="visualize_button")
