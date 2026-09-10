@@ -1,5 +1,8 @@
 # NBA Shot Visualizer & Spatial Analytics Dashboard
-
+<p align="center">
+  <img src="assets/scatter_preview.png" width="48%" />
+  <img src="assets/hexbin_preview.png" width="48%" />
+</p>
 An interactive full-stack spatial analytics dashboard built with Python, Streamlit, and Matplotlib. The application queries tracking data from the NBA Stats API, dynamically resolves career metadata across all active and historical playing years, maps deci-foot tracking coordinates to regulation court geometry, and provides dual-engine visualization via individual shot scatter charts and logarithmic hexbin density heatmaps.
 
 
@@ -57,3 +60,7 @@ An interactive full-stack spatial analytics dashboard built with Python, Streaml
                             │
                             ▼
                [ Interactive Browser Visual ]
+```
+## Note on Live Deployment: 
+
+The official NBA Stats API utilizes Akamai bot detection that blocks cloud hosting datacenter IP addresses (including Streamlit Community Cloud and AWS). To bypass API throttling, run the application locally on a residential network using streamlit run app.py[cite: 15].               
