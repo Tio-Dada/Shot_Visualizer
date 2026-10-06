@@ -63,4 +63,4 @@ An interactive full-stack spatial analytics dashboard built with Python, Streaml
 ```
 ## Note on Live Deployment: 
 
-The official NBA Stats API utilizes Akamai bot detection that blocks cloud hosting datacenter IP addresses (including Streamlit Community Cloud and AWS). To bypass API throttling, run the application locally on a residential network using streamlit run app.py[cite: 15].               
+The official NBA Stats API utilizes Akamai bot detection that blocks cloud hosting datacenter IP addresses (including Streamlit Community Cloud and AWS). To bypass API throttling, run the application locally on a residential network using streamlit run app.py               
